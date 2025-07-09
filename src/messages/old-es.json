@@ -1,0 +1,29 @@
+{
+    "Homepage": {
+        "hero-title": "Bienvenido a Desmar Global Inc.",
+        "hero-subtitle": "El principal proveedor de extracto y fibra de Yucca Schidigera",
+        "who-we-are-title": "Quiénes somos",
+        "who-we-are-p1": "Desmar Global Incorporated es un distribuidor mayorista bien establecido de Yucca Schidigera, operando durante más de 25 años. A lo largo de estas dos décadas, hemos cultivado relaciones sólidas con una amplia gama de asociados, cultivadores y comunidades en México.",
+        "who-we-are-p2": "Nuestro compromiso con nuestra filosofía y nuestros socios nos convierte en un proveedor sostenible de productos de Yucca Schidigera que satisfacen las necesidades de nuestros clientes. Nos enorgullece nuestra especialidad: desarrollar soluciones para usuarios finales en fibra y extracto de Yucca Schidigera.",
+        "about-us-link": "Sobre nosotros",
+        "our-products-title": "Nuestros productos",
+        "our-products-extract": "Extractos de Yucca en varios niveles de Brix (30%, 40% y 50%)",
+        "our-products-fiber": "Fibra de Yucca en varios niveles de TDS y Mesh",
+        "our-products-orders": "Pedidos empaquetados según las necesidades del cliente",
+        "more-product-info-link": "Más información sobre productos"
+    },
+    "Navbar": {
+        "homepage": "Página de inicio",
+        "about-us": "Acerca de Desmar",
+        "our-products": "Productos",
+        "about-yucca-schidigera": "Acerca de Yucca Schidigera",
+        "contact-us": "Contáctenos"
+    },
+        "PopupCard": {
+        "interested": "¿Interesado?",
+        "lets-talk": "Vamos a hablar sobre las necesidades de su empresa.",
+        "contact-us-at": "Contáctenos al (909) 770-9655 o a info@desmarglobal.com",
+        "or-use-form": "O use nuestro formulario en nuestra página de contacto:",
+        "contact-form-link": "Formulario de contacto"
+    }
+}

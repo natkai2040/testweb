@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #dcdccc;
+    --foreground: rgb(38, 38, 38);
+  }
+}
+
+body {
+  background: var(--background);
+  /* background: var(--background) url('/yucca_bg_design_filter.png') repeat; */
+  /* Change the background image here from /public/yucca_bg_design.png */
+  /* background-size: 440px 440px; */
+  
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+}
+
+a { /* Link Styles */
+  color: #9D6F2A; /* desmar_text_brown */
+  text-decoration: underline;
+}
+
+.desmar_text_white a { 
+  color: #EEE2CA; /* desmar_text_white */
+}
+
+p { 
+  margin: 0.5rem 0; /* Adjust spacing between paragraphs */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+input, textarea{
+  background: white;
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1rem; /* text-base */
+  padding: 0.5rem; /* Adjust padding for input fields */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 1rem; /* Space between label and input */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space between label and input */
+}
+.desmar_text_white {
+  color: #ffffff;
+}
+.desmar_text_offwhite {
+  color: #efefef;
+}
+
+.desmar_text_offwhite {
+  color: #efefef;
+}
+
+.desmar_text_light {
+  color: #EEE2CA;
+}
+.desmar_text_brown {
+  color: #9D6F2A; 
+}
+.desmar_text_black {
+  color: #0b0b0b; 
+}
+
+.desmar_text_shadow {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 1px 0 #fff;
+}
+
+.desmar_light_brown_bg { 
+    background-color: #DCDDCC; /* desmar_text_brown */
+}
+.desmar_brown_bg { 
+    background: #9D6F2A; /* desmar_text_brown */
+}
+.heading_desmar {
+  font-size: 3rem; /* text-xl */
+  font-family: var(--font-francois-one), sans-serif;
+}
+
+.subheading_desmar {
+  font-size: 2rem; /* text-xl */
+  font-family: var(--font-francois-one), sans-serif;
+}
+
+.subsubheading_desmar {
+  font-size: 1.5rem; /* text-lg */
+  font-family: var(--font-francois-one), sans-serif;
+}
+
+.section_desmar {
+  padding: 2rem; /* Adjust spacing between sections */
+}
+
+.fuzzy_border_square_image {
+  border-radius: 8px; /* Adjust as needed for the desired fuzziness */
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  box-shadow: inset 0px 60px 60px 60px var(--background);
+}
+
+.shadow-inner-white {
+  box-shadow: inset 0 0 32px 8px rgba(255,255,255,0.7);
+}
+
+.tiny_italics { 
+  font-size: 0.5rem; /* text-xs */
+  font-style: italic;
+}
+
+.interesting_text_desmar { 
+  font-family: var(--font-inter), sans-serif;
+  font-style: italic;
+  color: #3c472f; /* desmar_text_green */
+  font-size: 1.25rem; /* text-xl */
+  margin: 1.5rem 0; /* Adjust spacing */
+}
+
+/** case for white text */
+.interesting_text_desmar_white{ 
+  font-family: var(--font-inter), sans-serif;
+  font-style: italic;
+  color: #ffffff; /* desmar_text_green */
+  font-size: 1.25rem; /* text-xl */
+  margin: 1.5rem 0; /* Adjust spacing */
+}
+
+.button_link {
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Adjust padding for button appearance */
+  color: #ffffff; /* Text color */
+  font-style: italic;
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Rounded corners */
+  transition: 0.3s ease, filter 0.3s ease; /* <--- updated */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  white-space: nowrap;
+}
+
+.button_link:hover {
+  color: #ffffff; /* Text color on hover */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  filter: brightness(1.15); /* Lightens the button on hover */
+}
+
+.submit-button {/** same as button_link except with white border*/
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Adjust padding for button appearance */
+  color: #ffffff; /* Text color */
+  font-style: italic;
+  border: 1px solid #ffffff; /* White border */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Rounded corners */
+  transition: 0.3s ease, filter 0.3s ease; /* <--- updated */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  white-space: nowrap;
+}
+
+.submit-button:hover {
+  color: #ffffff; /* Text color on hover */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  filter: brightness(1.15); /* Lightens the button on hover */
+}
+
+.unordered-list-desmar {
+  list-style-type: disc; /* Default bullet points */
+  padding-left: 1.5rem; /* Indent list items */
+  margin: 0.5rem 0; /* Adjust spacing between lists */
+}
+
+.side_by_side_container_desmar {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column; /* Stack vertically by default */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.close_button_desmar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  color: #9D6F2A; /* desmar_text_brown */
+  font-size: 1.5rem; /* Adjust size as needed */
+}
+
+@media (min-width: 768px) {
+  .side_by_side_container_desmar {
+    flex-direction: row; /* Side by side on medium screens and up */
+  }
+}
+
+.center_vertical_container_desmar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Space between items */
+}
+
+/** HERO */
+@keyframes fadeZoomOnce {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  5% { opacity: 1; transform: scale(1.02); }
+  33.33% { opacity: 1; transform: scale(1.06); }
+  38% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.1); }
+}
+
+.fade-slide {
+  animation-name: fadeZoomOnce;
+  animation-duration: 32s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  will-change: opacity, transform;
+}
+
+/** Single Image Animate **/
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hero-zoom {
+  animation: zoomInOut 12s ease-in-out infinite;
+}
+
+/** Product Carousel */
+@keyframes fadeInDesmar {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.product-info-fade {
+  animation: fadeInDesmar 0.5s;
+}
+
+.external_link_svg { 
+  /**ml-1 h-4 w-4*/
+  display: inline;
+  vertical-align: middle;
+  margin-left: 0.25em; /* space from text */
+  width: 1em;
+  height: 1em;
+  opacity: 0.7;
+}
+
+/** Translation Navbar Buttons */
+[data-language-switcher] {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  margin:2px;
+}
+
+[data-language-switcher]:hover {
+  /* opacity: 1; */
+  /* font-weight: bold; */
+  box-shadow: 0 0 8px 2px #ffd88b, 0 0 16px 4px #fff8e1;
+}
+[data-language-switcher][data-is-current="true"] {
+  opacity: 1;
+  /* box-shadow: 0 0 8px 2px #ffd88b, 0 0 16px 4px #fff8e1; */
+}
