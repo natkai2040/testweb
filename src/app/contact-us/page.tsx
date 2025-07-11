@@ -1,5 +1,4 @@
 "use client"
-
 import {useTranslation, LinkWithLocale} from "next-export-i18n";
 
 export default function Contact_Us() {

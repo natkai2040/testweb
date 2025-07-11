@@ -46,7 +46,7 @@ export default function About_Yucca_Schidigera() {
             <h2 className="subheading_desmar text-[#283D27]">
              {t('About-Yucca.yucca-for-agriculture-title')}
             </h2>
-            <p>
+            {/* <p>
               {t('About-Yucca.yucca-for-agriculture-p1')}
             </p>
             <p>
@@ -54,8 +54,8 @@ export default function About_Yucca_Schidigera() {
             </p>
             <p>
               {t('About-Yucca.yucca-for-agriculture-p3')}
-            </p>
-            {/* <p>
+            </p> */}
+            <p>
               {t('About-Yucca.yucca-for-agriculture-p1')}
               Yucca Schidigera extract is widely used as a natural biostimulant,
               promoting crop growth and development, particularly under drought stress conditions.
@@ -106,7 +106,7 @@ export default function About_Yucca_Schidigera() {
             </p>
             <p>
               {t('About-Yucca.yucca-for-agriculture-p3')}By reducing the need for synthetic pesticides and fertilizers, Yucca Schidigera offers an eco-friendly solution for sustainable agriculture.
-            </p> */}
+            </p>
             <h3 className="subsubheading_desmar text-[#283D27]">{t('About-Yucca.yucca-for-agriculture-further-reading')}</h3>
             <ul className="unordered-list-desmar">
               <li>
@@ -130,9 +130,9 @@ export default function About_Yucca_Schidigera() {
             </ul>
           </div>
           <div className="h-1/3 md:w-1/3">
-            <Image src="/paddy-field-chen-yanhui.jpg"
-            alt="Rice Plants on a Farm"
-            width={3761} height={2821}
+            <Image src="/agriculture-field.jpeg"
+            alt="Plants on a Farm"
+            width={5159} height={3863}
             className="h-full w-full object-cover rounded-2xl shadow-inner-white"
             />
           </div>
@@ -145,7 +145,7 @@ export default function About_Yucca_Schidigera() {
             <h2 className="subheading_desmar text-[#614418]">
               {t('About-Yucca.yucca-for-livestock-title')}
             </h2>
-            <p>
+            {/* <p>
               {t('About-Yucca.yucca-for-livestock-p1')}
             </p>
             <p>
@@ -156,8 +156,8 @@ export default function About_Yucca_Schidigera() {
             </p>
             <p>
               {t('About-Yucca.yucca-for-livestock-p4')}
-            </p>
-            {/* <p>
+            </p> */}
+            <p>
               {t('About-Yucca.yucca-for-livestock-p1')}Yucca schidigera is widely used in animal feed as a natural additive for poultry, swine, cattle, and even in aquaculture.
             </p>
             <p>
@@ -221,7 +221,7 @@ export default function About_Yucca_Schidigera() {
               {' '}
 
               contributing to better animal health and survival.
-            </p> */}
+            </p>
             <h3 className="subsubheading_desmar text-[#614418]">{t('About-Yucca.yucca-for-livestock-further-reading')}</h3>
             <ul className="unordered-list-desmar">
               <li> 

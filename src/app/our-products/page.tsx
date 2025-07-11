@@ -82,10 +82,10 @@ export default function Our_Products() {
           </div>
           <div className="w-3/8">
             <Image
-              src="/container.jpg"
+              src="/palette_jack.jpg"
               alt="Yucca Schidigera Extract Container"
-              width={1216}
-              height={913}
+              width={4032}
+              height={3025}
               className="rounded-lg shadow-lg"
             />
           </div>

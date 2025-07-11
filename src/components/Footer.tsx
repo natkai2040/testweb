@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link";
 import {useTranslation, LinkWithLocale} from "next-export-i18n";
+import { IoLogoLinkedin } from "react-icons/io";
 
 
 export default function Footer() {
@@ -23,6 +24,11 @@ return (
                 <LinkWithLocale href="/contact-us">{t('Footer.contact-us')}</LinkWithLocale><br/>
                 <br/>
                 <LinkWithLocale href="/contact-us">{t('Footer.get-a-quote')}</LinkWithLocale><br/>
+                <div className="flex flex-row justify-center mb-1 mt-4">
+                    <a href="https://www.linkedin.com/company/desmarglobal/" target="_blank">
+                        <IoLogoLinkedin className="text-[#9D6F2A] h-8 w-auto" width={120} height={120}/>
+                    </a>
+                </div>
             </p>
         </div> 
         <div>
@@ -63,6 +69,8 @@ return (
         
       </div>
       DESMAR GLOBAL INC. © {new Date().getFullYear()} 
+    <div className="text-center text-xs pt-2 px-2 text-[#cdc5b7]">**This product is an unfinished RAW product, to be finished by customer. The statements on the website have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.**</div>
+    <div className="text-center text-xs pb-2 text-[#cdc5b7]"></div>
     </footer>
   );
 }
