@@ -1,7 +1,8 @@
+import React, { Suspense } from 'react';
+
 export default function NotFound() {
-    return (
-        <div>
-            Custom 404 Page
-        </div>
-    )
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+    </Suspense>
+  );
 }

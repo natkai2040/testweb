@@ -24,12 +24,12 @@ return (
                 <LinkWithLocale href="/contact-us">{t('Footer.contact-us')}</LinkWithLocale><br/>
                 <br/>
                 <LinkWithLocale href="/contact-us">{t('Footer.get-a-quote')}</LinkWithLocale><br/>
-                <div className="flex flex-row justify-center mb-1 mt-4">
-                    <a href="https://www.linkedin.com/company/desmarglobal/" target="_blank">
-                        <IoLogoLinkedin className="text-[#9D6F2A] h-8 w-auto" width={120} height={120}/>
-                    </a>
-                </div>
             </p>
+            <div className="flex flex-row justify-center mb-1 mt-4">
+                <a href="https://www.linkedin.com/company/desmarglobal/" target="_blank">
+                    <IoLogoLinkedin className="text-[#9D6F2A] h-8 w-auto" width={120} height={120}/>
+                </a>
+            </div>
         </div> 
         <div>
             <p className='text-left'>

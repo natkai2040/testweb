@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Inter,  Francois_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"; 
 import Footer from "@/components/Footer";
+import { Suspense } from 'react';
+
 
 import { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
@@ -64,18 +66,19 @@ export default async function RootLayout({
   children
 }: Props) {  
   return (
-    <html lang="en">
+    <html>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${francoisOne.variable} antialiased`}
       >
-        {/* <NextIntlClientProvider locale={locale} messages={messages}> */}
-        <Navbar/>
-          <div className="bg-white shadow-2xl">
-          {children}
-          </div>
-        <Footer/>
-        {/* </NextInt/lClientProvider > */}
-
+        <Suspense>
+          {/* <NextIntlClientProvider locale={locale} messages={messages}> */}
+          <Navbar/>
+            <div className="bg-white shadow-2xl">
+            {children}
+            </div>
+          <Footer/>
+          {/* </NextInt/lClientProvider > */}
+        </Suspense>
       </body>
     </html>
   );

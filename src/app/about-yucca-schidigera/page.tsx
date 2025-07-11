@@ -2,7 +2,6 @@
 
 // import Link from 'next/link';
 import Image from 'next/image';
-import { IoMdOpen } from "react-icons/io";
 import {useTranslation} from "next-export-i18n";
 
 
