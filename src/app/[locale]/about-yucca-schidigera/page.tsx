@@ -4,9 +4,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl'
 
-import { IoMdOpen } from "react-icons/io";
-
-
 export default function About_Yucca_Schidigera() {
   const t = useTranslations('About-Yucca')
   return (

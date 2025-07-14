@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ProductCarousel from '@/components/ProductCarousel';
-import HeroProductSlideshow from '@/components/HeroProductSlideshow'
 import { useTranslations } from 'next-intl'
 
 
@@ -11,24 +10,6 @@ export default function Our_Products() {
 
   return (
     <div>
-      {/* <div className="relative w-full h-[40vh] overflow-hidden">
-        <Image
-          src="/hero-images/yucca-hero-logs-4.JPG"
-          alt="Yucca Schidigera Hero"
-          fill
-          className="object-cover hero-zoom"
-          style={{ objectPosition: "center 20%" }}
-          priority
-        />
-        <div className="section_desmar absolute inset-0 flex flex-col justify-center items-center">
-          <h1 className="heading_desmar desmar_text_white desmar_text_shadow text-center">
-            Yucca Schidigera Products
-          </h1>
-          <div className='interesting_text_desmar_white desmar_text_shadow text-center'>
-            Leading suppliers of Yucca Schidigera in extracts and fibers, giving you quality in your product.
-          </div>
-        </div>
-      </div> */}
       <div className="w-full bg-center bg-cover"
         style={{
           backgroundImage: "url('/hero-images/yucca-hero-logs-4.JPG')",
