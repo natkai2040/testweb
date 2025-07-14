@@ -1,12 +1,15 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link";
-import {useTranslation, LinkWithLocale} from "next-export-i18n";
+import {Link} from '@/i18n/navigation';
+
+
+import { useTranslations } from 'next-intl'
 
 
 export default function Footer() {
-const { t } = useTranslation();
-return (
+  const t = useTranslations('Footer')
+
+  return (
     <footer className="w-full text-center desmar_text_light text-sm mt-8 bg-[#373816]">
     <div className="w-full py-8 bg-[#3c472f] side_by_side_container_desmar justify-apart">
         <div className="w-40 shrink-0 p-4">
@@ -18,20 +21,20 @@ return (
             />  
             <p>
                 <br/>
-                <LinkWithLocale  href="/about-us">{t('Footer.about-us')}</LinkWithLocale><br/>
+                <Link href="/about-us">{t('about-us')}</Link><br/>
                 <br/>
-                <LinkWithLocale href="/contact-us">{t('Footer.contact-us')}</LinkWithLocale><br/>
+                <Link href="/contact-us">{t('contact-us')}</Link><br/>
                 <br/>
-                <LinkWithLocale href="/contact-us">{t('Footer.get-a-quote')}</LinkWithLocale><br/>
+                <Link href="/contact-us">{t('get-a-quote')}</Link><br/>
             </p>
         </div> 
         <div>
             <p className='text-left'>
                 DESMAR GLOBAL INCORPORATED<br/>
                 <br/>
-                <span className="font-bold">{t('Footer.email')}</span> info@desmarglobal.com<br/>
+                <span className="font-bold">{t('email')}</span> info@desmarglobal.com<br/>
                 <br/>
-                <span className="font-bold">{t('Footer.phone-number')}</span> (909) 770 9655<br/>
+                <span className="font-bold">{t('phone-number')}</span> (909) 770 9655<br/>
                 <br/>
                 Desmar Global Inc. Headquarters<br/>
                 450 S. Lone Hill Ave. Suite A<br/>
@@ -40,22 +43,22 @@ return (
         </div>
         <div>
             <p className='text-left'>
-                {t('Footer.about-yucca-title')}<br/>
+                {t('about-yucca-title')}<br/>
                 <br/>
-                <LinkWithLocale  href="/about-yucca-schidigera">{t('Footer.yucca-for-agriculture-link')}</LinkWithLocale><br/>
+                <Link href="/about-yucca-schidigera">{t('yucca-for-agriculture-link')}</Link><br/>
                 <br/>
-                <LinkWithLocale href="/about-yucca-schidigera" >{t('Footer.yucca-for-livestock-link')}</LinkWithLocale><br/>
+                <Link href="/about-yucca-schidigera" >{t('yucca-for-livestock-link')}</Link><br/>
                 <br/>
-                <LinkWithLocale href="/about-yucca-schidigera" >{t('Footer.yucca-for-cosmetics-link')}</LinkWithLocale><br/>
+                <Link href="/about-yucca-schidigera" >{t('yucca-for-cosmetics-link')}</Link><br/>
             </p>
         </div>
         <div>
             <p className='text-left'>
-                {t('Footer.our-products-title')}<br/>
+                {t('our-products-title')}<br/>
                 <br/>
-                <LinkWithLocale  href="/our-products">{t('Footer.yucca-fiber-link')}</LinkWithLocale><br/>
+                <Link href="/our-products">{t('yucca-fiber-link')}</Link><br/>
                 <br/>
-                <LinkWithLocale href="/our-products">{t('Footer.yucca-extract-link')}</LinkWithLocale><br/>
+                <Link href="/our-products">{t('yucca-extract-link')}</Link><br/>
                 <br/>
             </p>
         </div>

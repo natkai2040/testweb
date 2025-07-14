@@ -2,32 +2,32 @@
 
 // import Link from 'next/link';
 import Image from 'next/image';
-import {useTranslation, LinkWithLocale} from "next-export-i18n";
+  import { useTranslations } from 'next-intl'
 
 export default function About_Us() {
-  const { t } = useTranslation();
+  const t = useTranslations('About-Us')
 
   return (
     <div>
       <div className="section_desmar">
-        <h1 className="heading_desmar desmar_text_brown text-center">{t('About-Us.about-desmar-title')}</h1>
+        <h1 className="heading_desmar desmar_text_brown text-center">{t('about-desmar-title')}</h1>
       </div>
       <div className="section_desmar desmar_light_brown_bg">
         <div className='interesting_text_desmar text-center'>
-          {t('About-Us.interesting-text-largest-supplier')}<br/>
+          {t('interesting-text-largest-supplier')}<br/>
           <br/>
-          {t('About-Us.interesting-text-our-commitment')}
+          {t('interesting-text-our-commitment')}
         </div>
       </div>
       <div className="section_desmar side_by_side_container_desmar">
         <p className="className=width-2/3">
-          {t('About-Us.main-well-established')}<br/>
+          {t('main-well-established')}<br/>
           <br/>
-          {t('About-Us.main-our-commitment')}<br/>
+          {t('main-our-commitment')}<br/>
           <br/>
-          {t('About-Us.main-our-specialty')}<br/>
+          {t('main-our-specialty')}<br/>
           <br/>
-          {t('About-Us.main-choose-desmar')}
+          {t('main-choose-desmar')}
         </p>
 
         <div>
@@ -41,11 +41,11 @@ export default function About_Us() {
         }}
       >
         <div className="section_desmar bg-[#EEE2CA]">
-          <h2 className="subheading_desmar desmar_text_brown">{t('About-Us.community-commitment-title')}</h2>
+          <h2 className="subheading_desmar desmar_text_brown">{t('community-commitment-title')}</h2>
           <p>
-            {t('About-Us.community-commitment-close-work')}<br/>
+            {t('community-commitment-close-work')}<br/>
             <br/>
-           {t('About-Us.community-commitment-ejidos')}
+           {t('community-commitment-ejidos')}
           </p>
         </div>
 

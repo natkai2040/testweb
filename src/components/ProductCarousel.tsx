@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import {useTranslation, LinkWithLocale} from "next-export-i18n";
+import {Link} from '@/i18n/navigation';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const products = [
@@ -17,7 +16,7 @@ const products = [
           <div className="">
             Yucca Schidigera Powder/Fiber is a raw material that maintains its foaming ability and ingredient integrity for over two years. It comes in packaging that includes double polyethylene-lined bags, fiber drums or cardboard boxes, with net weights of 20 kg, 25 kg, and 50 lbs (22.67 kg).
             <br/>
-            <LinkWithLocale href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ Inquire for Order Details</LinkWithLocale>
+            <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ Inquire for Order Details</Link>
           </div>
           {/* <div className="w-1/3">
             <Image src={"/product-images/bulkbag_combo.png"} alt="Bulk Bag of Yucca Schidigera Fiber" width={897} height={1021} className=""/>

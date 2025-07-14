@@ -3,11 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ProductCarousel from '@/components/ProductCarousel';
 import HeroProductSlideshow from '@/components/HeroProductSlideshow'
-import {useTranslation, LinkWithLocale} from "next-export-i18n";
+import { useTranslations } from 'next-intl'
 
 
 export default function Our_Products() {
-  const { t } = useTranslation();
+  const t = useTranslations('Our-Products') 
+
   return (
     <div>
       {/* <div className="relative w-full h-[40vh] overflow-hidden">
@@ -35,18 +36,18 @@ export default function Our_Products() {
         }}
       >
         <div className="section_desmar">
-          <h1 className="heading_desmar desmar_text_white desmar_text_shadow text-center">{t('Our-Products.yucca-schidigera-products-title')}</h1>
+          <h1 className="heading_desmar desmar_text_white desmar_text_shadow text-center">{t('yucca-schidigera-products-title')}</h1>
           <div className='interesting_text_desmar_white desmar_text_shadow text-center'>
-            {t('Our-Products.interesting-text-leading-suppliers')}
+            {t('interesting-text-leading-suppliers')}
           </div>
         </div>
       </div>
 
       <div className="section_desmar desmar_light_brown_bg">
-        {t('Our-Products.desmar-description-p1')}
+        {t('desmar-description-p1')}
         <br/>
         <br/>
-        {t('Our-Products.desmar-description-p2')}
+        {t('desmar-description-p2')}
       </div>
 
       <div className="w-full bg-center bg-cover"
@@ -56,8 +57,8 @@ export default function Our_Products() {
         }}
       >
         <div className="section_desmar">
-          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow">{t('Our-Products.splash-premium-yucca')}</h2>
-          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow ml-12">{t('Our-Products.splash-pure-power')}</h2>
+          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow">{t('splash-premium-yucca')}</h2>
+          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow ml-12">{t('splash-pure-power')}</h2>
         </div>
 
         {/* <div className="tiny_italics">
@@ -68,17 +69,17 @@ export default function Our_Products() {
       <ProductCarousel/>
       
       <div className="section_desmar desmar_light_brown_bg">
-        <h2 className="subheading_desmar desmar_text_brown text-center" id="yucca-extract">{t('Our-Products.concentrate-extract-title')}</h2>
-        <div className="interesting_text_desmar">▸ {t('Our-Products.concentrate-extract-brix-levels')}</div>
+        <h2 className="subheading_desmar desmar_text_brown text-center" id="yucca-extract">{t('concentrate-extract-title')}</h2>
+        <div className="interesting_text_desmar">▸ {t('concentrate-extract-brix-levels')}</div>
        
         <div className="side_by_side_container_desmar">
           <div className="w-1/2">
-            {t('Our-Products.concentrate-extract-p1')}
+            {t('concentrate-extract-p1')}
             <br/>
             <br/>
-            {t('Our-Products.concentrate-extract-p2')}
+            {t('concentrate-extract-p2')}
             <br/>
-            <LinkWithLocale href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ {t('Our-Products.concentrate-extract-inquire-link')}</LinkWithLocale>
+            <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ {t('concentrate-extract-inquire-link')}</Link>
           </div>
           <div className="w-3/8">
             <Image
@@ -102,16 +103,16 @@ export default function Our_Products() {
       </div>
       
       <div className="section_desmar desmar_light_brown_bg  mt-2">
-        <h2 className="subheading_desmar desmar_text_brown text-center" id="yucca-fiber">{t('Our-Products.fiber-powder-title')}</h2>
-        <div className="interesting_text_desmar">▸ {t('Our-Products.fiber-powder-tds-levels')}</div>
+        <h2 className="subheading_desmar desmar_text_brown text-center" id="yucca-fiber">{t('fiber-powder-title')}</h2>
+        <div className="interesting_text_desmar">▸ {t('fiber-powder-tds-levels')}</div>
         <div className="side_by_side_container_desmar">
           <div className="w-full md:w-1/2">
-            {t('Our-Products.fiber-powder-p1')}
+            {t('fiber-powder-p1')}
             <br/>
             <br/>
-            {t('Our-Products.fiber-powder-p2')}
+            {t('fiber-powder-p2')}
             <br/>
-            <LinkWithLocale href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ {t('Our-Products.fiber-powder-inquire-link')}</LinkWithLocale>
+            <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ {t('fiber-powder-inquire-link')}</Link>
           </div>
           <div className="w-full md:w-3/8 ">
             <Image

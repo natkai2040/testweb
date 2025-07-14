@@ -1,24 +1,26 @@
 'use client';
 
+import { usePathname, useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+
 import { useState } from 'react';
-// import Link from 'next/link';
+import {Link} from '@/i18n/navigation';
+
 import Image from 'next/image';
 import { IoIosMenu } from "react-icons/io";
-
-import {useTranslation, LanguageSwitcher, LinkWithLocale} from "next-export-i18n";
 
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations('Navbar')
 
   return (
     <nav className="block w-full px-4 py-2 mx-auto bg-white bg-opacity-90 sticky top-0 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
       <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
         {/* Logo */}
-        <LinkWithLocale
+        <Link
           href="/"
-          aria-label={t('Navbar.homepage')}
+          aria-label={t('homepage')}
           className="mr-4 block cursor-pointer py-0 text-base text-slate-800 font-semibold"
           onClick={() => setMenuOpen(false)}
         >
@@ -29,7 +31,7 @@ export default function Navbar() {
             height={195}
             className="h-12 w-auto"
           />
-        </LinkWithLocale>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden lg:block">
@@ -64,70 +66,60 @@ export default function Navbar() {
 
 // Extracted links for reuse
 function NavLinks({ onLinkClick }: { onLinkClick?: () => void }) {
-  const { t } = useTranslation();
+  const t = useTranslations('Navbar');
+  const pathname = usePathname();
+  const router = useRouter();
+  const currentLocale = useLocale();
+
+  const languages = [
+    { code: 'en', label: 'English', flag: '/flags/Flag_of_the_United_States.svg' },
+    { code: 'es', label: 'Español', flag: '/flags/Flag_of_Spain.svg' },
+    { code: 'zh-Hans', label: '简体中文', flag: "/flags/Flag_of_the_People's_Republic_of_China.svg" },
+    { code: 'zh-Hant', label: '繁體中文', flag: "/flags/Flag_of_the_People's_Republic_of_China.svg" }
+  ];
+
+  const switchLocale = (targetLocale: string) => {
+    const segments = pathname.split('/');
+    segments[1] = targetLocale;
+    router.push(segments.join('/'));
+    onLinkClick?.();
+  };
+
   return (
     <>
       <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-        <LanguageSwitcher lang="en" aria-label="English">
-          <div className="flex flex-col items-center text-[.5em]">
+        {languages.map(({ code, label, flag }) => (
+          <button
+            key={code}
+            onClick={() => switchLocale(code)}
+            aria-label={label}
+            disabled={code === currentLocale}
+            className={`flex flex-col items-center text-[.5em] transition-opacity ${
+              code === currentLocale ? 'opacity-100 font-bold' : 'opacity-60 hover:opacity-100'
+            }`}
+          >
             <Image
-              src="/flags/Flag_of_the_United_States.svg"
-              alt="English"
+              src={flag}
+              alt={label}
               width={24}
               height={16}
               className="inline-block align-middle m-1"
             />
-            <div>English</div>
-          </div>
-        </LanguageSwitcher>
-        <LanguageSwitcher lang="es" aria-label="Español">
-          <div className="flex flex-col items-center text-[.5em]">
-            <Image
-              src="/flags/Flag_of_Spain.svg"
-              alt="Español"
-              width={24}
-              height={16}
-              className="inline-block align-middle m-1"
-            />
-            Español
-          </div>
-        </LanguageSwitcher>
-        <LanguageSwitcher lang="zhHans" aria-label="简体中文">
-          <div className="flex flex-col items-center text-[.5em]">
-            <Image
-              src="/flags/Flag_of_the_People's_Republic_of_China.svg"
-              alt="简体中文"
-              width={24}
-              height={16}
-              className="inline-block align-middle m-1"
-            />
-            简体中文
-          </div>
-        </LanguageSwitcher>
-        <LanguageSwitcher lang="zhHant" aria-label="繁體中文">
-          <div className="flex flex-col items-center text-[.5em]">
-            <Image
-              src="/flags/Flag_of_the_People's_Republic_of_China.svg"
-              alt="繁體中文"
-              width={24}
-              height={16}
-              className="inline-block align-middle m-1"
-            />
-            繁體中文
-          </div>
-        </LanguageSwitcher>
+            {label}
+          </button>
+        ))}
       </li>
       <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-        <LinkWithLocale href="/about-us" className="flex items-center" onClick={onLinkClick}>{t('Navbar.about-us')}</LinkWithLocale>
+        <Link href="/about-us" className="flex items-center" onClick={onLinkClick}>{t('about-us')}</Link>
       </li>
       <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-        <LinkWithLocale href="/our-products" className="flex items-center" onClick={onLinkClick}>{t('Navbar.our-products')}</LinkWithLocale>
+        <Link href="/our-products" className="flex items-center" onClick={onLinkClick}>{t('our-products')}</Link>
       </li>
       <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-        <LinkWithLocale href="/about-yucca-schidigera" className="flex items-center" onClick={onLinkClick}>{t('Navbar.about-yucca-schidigera')}</LinkWithLocale>
+        <Link href="/about-yucca-schidigera" className="flex items-center" onClick={onLinkClick}>{t('about-yucca-schidigera')}</Link>
       </li>
       <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-        <LinkWithLocale href="/contact-us" className="flex items-center" onClick={onLinkClick}>{t('Navbar.contact-us')}</LinkWithLocale>
+        <Link href="/contact-us" className="flex items-center" onClick={onLinkClick}>{t('contact-us')}</Link>
       </li>
     </>
   );

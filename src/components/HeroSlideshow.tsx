@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 const images = [
-  'hero-images/yucca_hero_1.jpeg',
-  'hero-images/yucca_hero_2.jpeg',
-  'hero-images/yucca_hero_3.jpeg',
-  'hero-images/yucca-hero-logs-4.JPG',
+  '/hero-images/yucca_hero_1.jpeg',
+  '/hero-images/yucca_hero_2.jpeg',
+  '/hero-images/yucca_hero_3.jpeg',
+  '/hero-images/yucca-hero-logs-4.JPG',
 ];
 
 export default function HeroSlideshow({ children }: { children?: React.ReactNode }) {

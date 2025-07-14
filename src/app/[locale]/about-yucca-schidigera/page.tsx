@@ -2,41 +2,42 @@
 
 // import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl'
+
 import { IoMdOpen } from "react-icons/io";
-import {useTranslation} from "next-export-i18n";
 
 
 export default function About_Yucca_Schidigera() {
-  const { t } = useTranslation();
+  const t = useTranslations('About-Yucca')
   return (
     <div>
       <div className="section_desmar">
-        <h1 className="heading_desmar desmar_text_brown text-center">{t('About-Yucca.what-is-yucca-title')}</h1>
+        <h1 className="heading_desmar desmar_text_brown text-center">{t('what-is-yucca-title')}</h1>
         <div className='interesting_text_desmar text-center'>
-          {t('About-Yucca.interesting-text-botanical-gem')}
+          {t('interesting-text-botanical-gem')}
         </div>
         <p>
-          {t('About-Yucca.main-p1')}
+          {t('main-p1')}
         </p>
         <p>
-          {t('About-Yucca.main-p2')}
+          {t('main-p2')}
         </p>
         <p>
-          {t('About-Yucca.main-p3')}
+          {t('main-p3')}
         </p>
       </div>
       
       <div className="section_desmar desmar_light_brown_bg">
         <h2 className="subheading_desmar desmar_text_brown">
-          {t('About-Yucca.where-grown-title')}
+          {t('where-grown-title')}
         </h2>
         <p>
-          {t('About-Yucca.where-grown-description')}
+          {t('where-grown-description')}
         </p>
       </div>
       <div className="section_desmar">
         <h1 className="heading_desmar desmar_text_brown text-center">
-          {t('About-Yucca.uses-title')}
+          {t('uses-title')}
         </h1>
       </div>
 
@@ -44,19 +45,19 @@ export default function About_Yucca_Schidigera() {
         <div className="side_by_side_container_desmar">
           <div className="h-2/3 md:w-2/3 desmar_text_white">
             <h2 className="subheading_desmar text-[#283D27]">
-             {t('About-Yucca.yucca-for-agriculture-title')}
+             {t('yucca-for-agriculture-title')}
             </h2>
             <p>
-              {t('About-Yucca.yucca-for-agriculture-p1')}
+              {t('yucca-for-agriculture-p1')}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-agriculture-p2')}
+              {t('yucca-for-agriculture-p2')}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-agriculture-p3')}
+              {t('yucca-for-agriculture-p3')}
             </p>
             {/* <p>
-              {t('About-Yucca.yucca-for-agriculture-p1')}
+              {t('yucca-for-agriculture-p1')}
               Yucca Schidigera extract is widely used as a natural biostimulant,
               promoting crop growth and development, particularly under drought stress conditions.
               It has been shown to         
@@ -72,7 +73,7 @@ export default function About_Yucca_Schidigera() {
               in several crop species.
             </p>
             <p>
-              {t('About-Yucca.yucca-for-agriculture-p2')}Additionally, due to its
+              {t('yucca-for-agriculture-p2')}Additionally, due to its
               {' '}
               <a
                 href="https://journal-inflammation.biomedcentral.com/articles/10.1186/1476-9255-3-6"
@@ -105,9 +106,9 @@ export default function About_Yucca_Schidigera() {
               {' '}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-agriculture-p3')}By reducing the need for synthetic pesticides and fertilizers, Yucca Schidigera offers an eco-friendly solution for sustainable agriculture.
+              {t('yucca-for-agriculture-p3')}By reducing the need for synthetic pesticides and fertilizers, Yucca Schidigera offers an eco-friendly solution for sustainable agriculture.
             </p> */}
-            <h3 className="subsubheading_desmar text-[#283D27]">{t('About-Yucca.yucca-for-agriculture-further-reading')}</h3>
+            <h3 className="subsubheading_desmar text-[#283D27]">{t('yucca-for-agriculture-further-reading')}</h3>
             <ul className="unordered-list-desmar">
               <li>
                 <a
@@ -115,7 +116,7 @@ export default function About_Yucca_Schidigera() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {t('About-Yucca.fungicide-link')}
+                  {t('fungicide-link')}
                 </a>
               </li>
               <li>
@@ -124,7 +125,7 @@ export default function About_Yucca_Schidigera() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                {t('About-Yucca.government-link')}
+                {t('government-link')}
                 </a>
               </li>
             </ul>
@@ -143,25 +144,25 @@ export default function About_Yucca_Schidigera() {
         <div className="side_by_side_container_desmar">
           <div className="h-2/3 md:w-2/3 desmar_text_white">
             <h2 className="subheading_desmar text-[#614418]">
-              {t('About-Yucca.yucca-for-livestock-title')}
+              {t('yucca-for-livestock-title')}
             </h2>
             <p>
-              {t('About-Yucca.yucca-for-livestock-p1')}
+              {t('yucca-for-livestock-p1')}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-livestock-p2')}
+              {t('yucca-for-livestock-p2')}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-livestock-p3')}
+              {t('yucca-for-livestock-p3')}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-livestock-p4')}
+              {t('yucca-for-livestock-p4')}
             </p>
             {/* <p>
-              {t('About-Yucca.yucca-for-livestock-p1')}Yucca schidigera is widely used in animal feed as a natural additive for poultry, swine, cattle, and even in aquaculture.
+              {t('yucca-for-livestock-p1')}Yucca schidigera is widely used in animal feed as a natural additive for poultry, swine, cattle, and even in aquaculture.
             </p>
             <p>
-              {t('About-Yucca.yucca-for-livestock-p2')}When incorporated into livestock diets, Yucca has been shown to
+              {t('yucca-for-livestock-p2')}When incorporated into livestock diets, Yucca has been shown to
 
               {' '}
               <a
@@ -188,7 +189,7 @@ export default function About_Yucca_Schidigera() {
               in ruminants, helping to improve air quality and reduce the environmental impact of animal agriculture.
           </p>
           <p>
-              {t('About-Yucca.yucca-for-livestock-p3')}In poultry, Yucca supplementation has been linked to
+              {t('yucca-for-livestock-p3')}In poultry, Yucca supplementation has been linked to
               {' '}
               <a
               href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4774811/"
@@ -200,7 +201,7 @@ export default function About_Yucca_Schidigera() {
               {' '} including improved feed efficiency, enhanced protein and energy utilization, and higher survival rates.
             </p>
             <p>
-              {t('About-Yucca.yucca-for-livestock-p4')}
+              {t('yucca-for-livestock-p4')}
               <a
               href="https://www.sciencedirect.com/science/article/abs/pii/B9780323916622000090"
               target="_blank"
@@ -222,7 +223,7 @@ export default function About_Yucca_Schidigera() {
 
               contributing to better animal health and survival.
             </p> */}
-            <h3 className="subsubheading_desmar text-[#614418]">{t('About-Yucca.yucca-for-livestock-further-reading')}</h3>
+            <h3 className="subsubheading_desmar text-[#614418]">{t('yucca-for-livestock-further-reading')}</h3>
             <ul className="unordered-list-desmar">
               <li> 
                 <a
@@ -230,7 +231,7 @@ export default function About_Yucca_Schidigera() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {t('About-Yucca.yucca-for-livestock-greenhouse-link')}
+                  {t('yucca-for-livestock-greenhouse-link')}
                 </a>
               </li>
             </ul>
@@ -246,15 +247,15 @@ export default function About_Yucca_Schidigera() {
         <div className="side_by_side_container_desmar">
           <div className="h-2/3 md:w-2/3 desmar_text_white">
             <h2 className="subheading_desmar text-[#5C225D]">
-              {t('About-Yucca.yucca-for-cosmetics-title')}
+              {t('yucca-for-cosmetics-title')}
             </h2>
             <p>
-              {t('About-Yucca.yucca-for-cosmetics-p1')}
+              {t('yucca-for-cosmetics-p1')}
             </p>
             <p>
-              {t('About-Yucca.yucca-for-cosmetics-p2')}
+              {t('yucca-for-cosmetics-p2')}
             </p>
-            <h3 className="subsubheading_desmar text-[#5C225D]">{t('About-Yucca.yucca-for-cosmetics-further-reading')}</h3>
+            <h3 className="subsubheading_desmar text-[#5C225D]">{t('yucca-for-cosmetics-further-reading')}</h3>
             <ul className="unordered-list-desmar">
               <li>
                 <a
@@ -262,7 +263,7 @@ export default function About_Yucca_Schidigera() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    {t('About-Yucca.yucca-for-cosmetics-cosmile-link')}  
+                    {t('yucca-for-cosmetics-cosmile-link')}  
                 </a>
               </li>
             </ul>

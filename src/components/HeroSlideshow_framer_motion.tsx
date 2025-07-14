@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const images = [
-  'hero-images/yucca_hero_1.jpeg',
-  'hero-images/yucca_hero_2.jpeg',
-  'hero-images/yucca_hero_3.jpeg',
-  'hero-images/yucca-hero-logs-4.JPG',
+  '@/public/hero-images/yucca_hero_1.jpeg',
+  '@/public/hero-images/yucca_hero_2.jpeg',
+  '@/public/hero-images/yucca_hero_3.jpeg',
+  '@/public/hero-images/yucca-hero-logs-4.JPG',
 ];
 
 const SLIDE_DURATION = 8000;
