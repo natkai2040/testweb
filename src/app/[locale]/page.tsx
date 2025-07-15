@@ -62,7 +62,11 @@ export default function MainPage() {
 
         <div className="md:w-1/3 w-7/8 flex flex-col items-center mx-[2%] relative overflow-hidden">
           <div className="fuzzy_border_square_image"> {/** TODO: temprary fix, remove hidden */}
-            <Image src="/paddy-field-chen-yanhui.jpg" alt="Rice Plants on a Farm" width={3761} height={2821} className="h-full w-full object-cover" />
+            <Image src="/agriculture-field22.jpg"
+            alt="Plants on a Farm"
+            width={1740} height={1320}
+            className="h-full w-full object-cover" 
+            />
             <Link href="/about-yucca-schidigera" className="button_link absolute bg-[#609D5C] left-1/2 bottom-4 -translate-x-1/2">▷ {t('agriculture-link')}</Link>
           </div>
           <div className="tiny_italics">
@@ -72,7 +76,11 @@ export default function MainPage() {
         
         <div className="md:w-1/3 w-7/8 flex flex-col items-center mx-[2%] relative overflow-hidden">
           <div className="fuzzy_border_square_image">
-            <Image src="/pigs-marek-piwnicki.jpg" alt="White Pig on Brown Soil" width={3967} height={2635} className="h-full w-full object-cover" />
+            <Image src="/pigs-marek-piwnicki2.jpg"
+            alt="White Pig on Brown Soil"
+            width={1984} height={1318}
+            className="h-full w-full object-cover"
+            />
             <Link href="/about-yucca-schidigera" className="button_link absolute bg-[#AE9570] left-1/2 bottom-4 -translate-x-1/2">▷ {t('livestock-link')}</Link>
           </div>
           <div className="tiny_italics">
@@ -82,7 +90,11 @@ export default function MainPage() {
         
         <div className="md:w-1/3 w-7/8 flex flex-col items-center mx-[2%] relative overflow-hidden">
           <div className="fuzzy_border_square_image">
-            <Image src="/clear-bottle-nataliya-melnychuk.jpg" alt="Clear Makeup Bottle" width={4000} height={6000} className="h-full w-full object-cover " />
+            <Image src="/clear-bottle-nataliya-melnychuk3.jpg"
+            alt="Clear Makeup Bottle"
+            width={2000} height={2500}
+            className="h-full w-full object-cover "
+            />
             <Link href="/about-yucca-schidigera" className="button_link absolute bg-[#C18FC2] left-1/2 bottom-4 -translate-x-1/2">▷ {t('cosmetics-link')}</Link>
           </div>
           <div className="tiny_italics">

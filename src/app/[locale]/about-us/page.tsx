@@ -36,7 +36,7 @@ export default function About_Us() {
       </div>
       <div className="w-full bg-center bg-cover py-30"
         style={{
-          backgroundImage: "url('/baja-california-josue-michael.jpg')",
+          backgroundImage: "url('/baja-california-josue-michael2.jpg')",
           backgroundPosition: "center 40%"
         }}
       >

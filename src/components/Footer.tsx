@@ -1,10 +1,7 @@
 "use client"
 import Image from "next/image"
 import {Link} from '@/i18n/navigation';
-
-
 import { useTranslations } from 'next-intl'
-
 
 export default function Footer() {
   const t = useTranslations('Footer')
@@ -61,11 +58,17 @@ export default function Footer() {
                 <Link href="/our-products">{t('yucca-extract-link')}</Link><br/>
                 <br/>
             </p>
-        </div>
-        
-        
+        </div>        
       </div>
-      DESMAR GLOBAL INC. © {new Date().getFullYear()} 
+      <div className="p-2 text-center">
+        <div className="desmar_text_light">
+            DESMAR GLOBAL INC. © {new Date().getFullYear()} 
+        </div>
+        <div className="text-xs text-[#cdc5b7]">
+            *This product is an unfinished RAW product, to be finished by customer.
+            The statements on the website have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.**
+        </div>
+    </div>
     </footer>
   );
 }

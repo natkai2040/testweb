@@ -128,9 +128,9 @@ export default function About_Yucca_Schidigera() {
             </ul>
           </div>
           <div className="h-1/3 md:w-1/3">
-            <Image src="/paddy-field-chen-yanhui.jpg"
-            alt="Rice Plants on a Farm"
-            width={3761} height={2821}
+            <Image src="/agriculture-field22.jpg"
+            alt="Plants on a Farm"
+            width={1740} height={1320}
             className="h-full w-full object-cover rounded-2xl shadow-inner-white"
             />
           </div>
@@ -234,7 +234,10 @@ export default function About_Yucca_Schidigera() {
             </ul>
           </div>
           <div className="h-1/3 md:w-1/3">
-            <Image src="/pigs-marek-piwnicki.jpg" alt="White Pig on Brown Soil" width={3967} height={2635}
+            <Image 
+            src="/pigs-marek-piwnicki2.jpg"
+            alt="White Pig on Brown Soil"
+            width={1984} height={1318}
             className="rounded-2xl shadow-inner-white"/>
           </div>
         </div>
@@ -266,11 +269,10 @@ export default function About_Yucca_Schidigera() {
             </ul>
           </div>
           <div className="h-1/3 md:w-1/3">
-            <Image
-              src="/clear-bottle-nataliya-melnychuk.jpg"
+            <Image 
+              src="/clear-bottle-nataliya-melnychuk3.jpg"
               alt="Clear Makeup Bottle"
-              width={4000}
-              height={6000}
+              width={2000} height={2500}
               className="w-full aspect-[4/3] object-cover rounded-2xl shadow-inner-white"
             />
           </div>

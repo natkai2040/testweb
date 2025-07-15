@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 const image = 'hero-images/yucca-hero-logs-4.JPG';
 
 export default function HeroProductSlideshow({ children }: { children?: React.ReactNode }) {

@@ -54,7 +54,7 @@ export default function Our_Products() {
         <div className="interesting_text_desmar">▸ {t('concentrate-extract-brix-levels')}</div>
        
         <div className="side_by_side_container_desmar">
-          <div className="w-1/2">
+          <div className=" w-full md:w-1/2">
             {t('concentrate-extract-p1')}
             <br/>
             <br/>
@@ -62,24 +62,27 @@ export default function Our_Products() {
             <br/>
             <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ {t('concentrate-extract-inquire-link')}</Link>
           </div>
-          <div className="w-3/8">
-            <Image
-              src="/container.jpg"
-              alt="Yucca Schidigera Extract Container"
-              width={1216}
-              height={913}
-              className="rounded-lg shadow-lg"
-            />
+          <div className="items-center flex-row flex w-full gap-4 md:w-1/2">
+            <div className="w-3/4">
+              <Image
+                src="/palette_jack2.jpg"
+                alt="Yucca Schidigera Extract Container"
+                width={2854}
+                height={1776}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="w-1/4">
+              <Image
+                src="/product-images/nontransparent-bottle.jpeg"
+                alt="Yucca Schidigera Extract Sample"
+                width={1042}
+                height={2450}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
           </div>
-          <div className="w-1/8">
-            <Image
-              src="/product-images/nontransparent-bottle.jpeg"
-              alt="Yucca Schidigera Extract Sample"
-              width={1042}
-              height={2450}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+
         </div>
       </div>
       
@@ -95,41 +98,26 @@ export default function Our_Products() {
             <br/>
             <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ {t('fiber-powder-inquire-link')}</Link>
           </div>
-          <div className="w-full md:w-3/8 ">
-            <Image
-              src="/supersacks-in-warehouse.jpg"
-              alt="Yucca Schidigera Supersacks in a Warehouse"
-              width={4032}
-              height={3024}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-          {/* <div className="w-full md:w-1/8">
-            <Image
-              src="/powder-pile.jpeg"
-              alt="Yucca Schidigera Powder Pile"
-              width={489}
-              height={869}
-              className="rounded-lg shadow-lg"
-            />
-          </div> */}
-          {/* <div className="w-full md:w-1/4">
-            <Image
-              src="/fiber-bags-truck.jpg"
-              alt="Yucca Schidigera Supersacks in a Truck"
-              width={651}
-              height={869}
-              className="rounded-lg shadow-lg"
-            />
-          </div> */}
-          <div className="w-full md:w-1/8">
-            <Image
-              src="/yucca_powder.jpg"
-              alt="Yucca Schidigera Powder Bag"
-              width={684}
-              height={912}
-              className="rounded-lg shadow-lg"
-            />
+
+          <div className="items-center flex-row flex w-full gap-4 md:w-1/2">
+            <div className="w-1/4">
+              <Image
+                src="/yucca_powder.jpg"
+                alt="Yucca Schidigera Powder Bag"
+                width={684}
+                height={912}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="w-3/4">
+              <Image
+                src="/supersacks-in-warehouse.jpg"
+                alt="Yucca Schidigera Supersacks in a Warehouse"
+                width={4032}
+                height={3024}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
