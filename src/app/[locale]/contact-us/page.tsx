@@ -60,7 +60,8 @@ export default function Contact_Us() {
           {t('contact-form-title')}
         </h2>
         <p>{t('contact-form-prompt')}</p>
-        <form className="contact-form">
+        <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="e544ccf9-04f9-474b-aae9-69ff3e4bd0e8"></input>
           <div className="form-group">
             <label htmlFor="name">{t('contact-form-name')}: *</label><br/>
             <input type="text" id="name" name="name" required />
@@ -92,6 +93,7 @@ export default function Contact_Us() {
               {t('contact-form-yucca-fiber-powder')}
             </label><br/>
           </div>
+          <input type="hidden" name="redirect" value="https://web3forms.com/success"></input>
           <button type="submit" className="submit-button bg-[#749772]">{t('contact-form-submit-button')}</button>
           <p className="font-bold">{t('contact-form-we-will-respond')}</p>
         </form>
