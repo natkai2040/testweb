@@ -34,7 +34,7 @@ export default function About_Us() {
           <Image src="/DesmarLogo-02 flag.jpg" alt="Desmar Global Inc. Logo" width={1206} height={1526} className="width-1/3"/>
         </div>
       </div>
-      <div className="relative w-full h-[500px]"> {/* Adjust height as needed */}
+      <div className="relative w-full h-[700px] md:h-[500px] "> {/* Adjust height as needed */}
         <Image
           src="/baja-california-josue-michael2.jpg"
           alt="Baja California background"

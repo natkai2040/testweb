@@ -10,7 +10,7 @@ export default function Our_Products() {
 
   return (
     <div>
-      <div className="relative w-full h-[200px]">
+      <div className="relative w-full h-[300px] md:h-[200px]">
         <Image
           src="/hero-images/yucca-hero-logs-4.jpg"
           alt="Yucca Logs"
@@ -18,7 +18,7 @@ export default function Our_Products() {
           className="object-cover object-[center_20%]"
           priority 
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text_light_desmar text-center z-10">
           <h1 className="heading_desmar desmar_text_white desmar_text_shadow">
             {t('yucca-schidigera-products-title')}
           </h1>
@@ -34,7 +34,7 @@ export default function Our_Products() {
         {t('desmar-description-p2')}
       </div>
 
-      <div className="relative w-full h-[150px]">
+      <div className="relative w-full h-[250px] md:h-[150px]">
         <Image
           src="/sunray_through_joshua_tree_explore_with_josh.jpg"
           alt="Sunray through Joshua Tree"
