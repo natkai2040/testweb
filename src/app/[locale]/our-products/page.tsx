@@ -58,7 +58,7 @@ export default function Our_Products() {
       <ProductCarousel/>
       
       <div className="section_desmar desmar_light_brown_bg">
-        <h2 className="subheading_desmar desmar_text_brown text-center" id="yucca-extract">{t('concentrate-extract-title')}</h2>
+        <h2 className="subheading_desmar desmar_text_brown text-center scroll-mt-24" id="yucca-extract">{t('concentrate-extract-title')}</h2>
         <div className="interesting_text_desmar">▸ {t('concentrate-extract-brix-levels')}</div>
        
         <div className="side_by_side_container_desmar">
@@ -95,7 +95,7 @@ export default function Our_Products() {
       </div>
       
       <div className="section_desmar desmar_light_brown_bg  mt-2">
-        <h2 className="subheading_desmar desmar_text_brown text-center" id="yucca-fiber">{t('fiber-powder-title')}</h2>
+        <h2 className="subheading_desmar desmar_text_brown text-center scroll-mt-24" id="yucca-fiber">{t('fiber-powder-title')}</h2>
         <div className="interesting_text_desmar">▸ {t('fiber-powder-tds-levels')}</div>
         <div className="side_by_side_container_desmar">
           <div className="w-full md:w-1/2">

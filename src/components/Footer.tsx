@@ -42,20 +42,20 @@ export default function Footer() {
             <p className='text-left'>
                 {t('about-yucca-title')}<br/>
                 <br/>
-                <Link href="/about-yucca-schidigera">{t('yucca-for-agriculture-link')}</Link><br/>
+                <Link href="/about-yucca-schidigera#agriculture">{t('yucca-for-agriculture-link')}</Link><br/>
                 <br/>
-                <Link href="/about-yucca-schidigera" >{t('yucca-for-livestock-link')}</Link><br/>
+                <Link href="/about-yucca-schidigera#livestock" >{t('yucca-for-livestock-link')}</Link><br/>
                 <br/>
-                <Link href="/about-yucca-schidigera" >{t('yucca-for-cosmetics-link')}</Link><br/>
+                <Link href="/about-yucca-schidigera#cosmetics" >{t('yucca-for-cosmetics-link')}</Link><br/>
             </p>
         </div>
         <div>
             <p className='text-left'>
                 {t('our-products-title')}<br/>
                 <br/>
-                <Link href="/our-products">{t('yucca-fiber-link')}</Link><br/>
+                <Link href="/our-products#yucca-fiber">{t('yucca-fiber-link')}</Link><br/>
                 <br/>
-                <Link href="/our-products">{t('yucca-extract-link')}</Link><br/>
+                <Link href="/our-products#yucca-extract">{t('yucca-extract-link')}</Link><br/>
                 <br/>
             </p>
         </div>        
