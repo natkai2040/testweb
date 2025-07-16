@@ -25,7 +25,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(false)}
         >
           <Image
-            src="/New Desmar-1.PNG"
+            src="/New Desmar-1.png"
             alt="Desmar Logo"
             width={611}
             height={195}

@@ -4,7 +4,7 @@ const images = [
   '/hero-images/yucca_hero_1.jpg',
   '/hero-images/yucca_hero_2.jpg',
   '/hero-images/yucca_hero_3.jpg',
-  '/hero-images/yucca-hero-logs-4.JPG',
+  '/hero-images/yucca-hero-logs-4.jpg',
 ];
 
 export default function HeroSlideshow({ children }: { children?: React.ReactNode }) {

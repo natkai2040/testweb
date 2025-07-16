@@ -10,20 +10,23 @@ export default function Our_Products() {
 
   return (
     <div>
-      <div className="w-full bg-center bg-cover"
-        style={{
-          backgroundImage: "url('/hero-images/yucca-hero-logs-4.JPG')",
-          backgroundPosition: "center 20%"
-        }}
-      >
-        <div className="section_desmar">
-          <h1 className="heading_desmar desmar_text_white desmar_text_shadow text-center">{t('yucca-schidigera-products-title')}</h1>
-          <div className='interesting_text_desmar_white desmar_text_shadow text-center'>
+      <div className="relative w-full h-[200px]">
+        <Image
+          src="/hero-images/yucca-hero-logs-4.jpg"
+          alt="Yucca Logs"
+          fill
+          className="object-cover object-[center_20%]"
+          priority 
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+          <h1 className="heading_desmar desmar_text_white desmar_text_shadow">
+            {t('yucca-schidigera-products-title')}
+          </h1>
+          <div className='interesting_text_desmar_white desmar_text_shadow'>
             {t('interesting-text-leading-suppliers')}
           </div>
         </div>
       </div>
-
       <div className="section_desmar desmar_light_brown_bg">
         {t('desmar-description-p1')}
         <br/>
@@ -31,17 +34,22 @@ export default function Our_Products() {
         {t('desmar-description-p2')}
       </div>
 
-      <div className="w-full bg-center bg-cover"
-        style={{
-          backgroundImage: "url('/sunray_through_joshua_tree_explore_with_josh.jpg')",
-          backgroundPosition: "center 40%"
-        }}
-      >
-        <div className="section_desmar">
-          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow">{t('splash-premium-yucca')}</h2>
-          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow ml-12">{t('splash-pure-power')}</h2>
+      <div className="relative w-full h-[150px]">
+        <Image
+          src="/sunray_through_joshua_tree_explore_with_josh.jpg"
+          alt="Sunray through Joshua Tree"
+          fill
+          className="object-cover object-[center_40%]"
+          priority // if above-the-fold
+        />
+        <div className="absolute inset-0 flex flex-col justify-center items-start pl-12 z-10">
+          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow">
+            {t('splash-premium-yucca')}
+          </h2>
+          <h2 className="desmar_text_white subheading_desmar desmar_text_shadow ml-12">
+            {t('splash-pure-power')}
+          </h2>
         </div>
-
         {/* <div className="tiny_italics">
           Photo by <a href="https://unsplash.com/@explorewithjoshua?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Explore with Joshua</a> on <a href="https://unsplash.com/photos/brown-leafless-tree-on-brown-field-during-daytime-mErSbLOqSJk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div> */}

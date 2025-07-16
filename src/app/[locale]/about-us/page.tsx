@@ -34,24 +34,33 @@ export default function About_Us() {
           <Image src="/DesmarLogo-02 flag.jpg" alt="Desmar Global Inc. Logo" width={1206} height={1526} className="width-1/3"/>
         </div>
       </div>
-      <div className="w-full bg-center bg-cover py-30"
-        style={{
-          backgroundImage: "url('/baja-california-josue-michael2.jpg')",
-          backgroundPosition: "center 40%"
-        }}
-      >
-        <div className="section_desmar bg-[#EEE2CA]">
-          <h2 className="subheading_desmar desmar_text_brown">{t('community-commitment-title')}</h2>
-          <p>
-            {t('community-commitment-close-work')}<br/>
-            <br/>
-           {t('community-commitment-ejidos')}
-          </p>
+      <div className="relative w-full h-[500px]"> {/* Adjust height as needed */}
+        <Image
+          src="/baja-california-josue-michael2.jpg"
+          alt="Baja California background"
+          fill
+          priority
+          className="object-cover object-[center_40%] z-0"
+        />
+
+        <div className="relative z-10 w-full h-full flex items-center justify-center py-30">
+          <div className="section_desmar bg-[#EEE2CA] px-4">
+            <h2 className="subheading_desmar desmar_text_brown">
+              {t('community-commitment-title')}
+            </h2>
+            <p>
+              {t('community-commitment-close-work')}<br /><br />
+              {t('community-commitment-ejidos')}
+            </p>
+          </div>
         </div>
 
-        {/* <div className="tiny_italics">
-          Photo by <a href="https://unsplash.com/@josuemichelphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Josue Michel</a> on <a href="https://unsplash.com/photos/green-and-white-flowers-on-bicycle-DJabuBuUdQU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </div> */}
+        {/* Optional: Image credit */}
+        {/* 
+        <div className="absolute bottom-2 right-2 text-xs text-white z-10">
+          Photo by <a className="underline" href="https://unsplash.com/@josuemichelphotography">Josue Michel</a> on <a className="underline" href="https://unsplash.com/photos/green-and-white-flowers-on-bicycle-DJabuBuUdQU">Unsplash</a>
+        </div> 
+        */}
       </div>
     </div>
   );
