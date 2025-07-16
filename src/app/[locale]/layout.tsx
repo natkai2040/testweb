@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter,  Francois_One } from "next/font/google";
 import "../globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 
 import Navbar from "@/components/Navbar"; 
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
             </div>
           <Footer/>
         </NextIntlClientProvider>
+        <Analytics/>
       </body>
     </html>
   );

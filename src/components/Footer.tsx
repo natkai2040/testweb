@@ -65,8 +65,7 @@ export default function Footer() {
             DESMAR GLOBAL INC. © {new Date().getFullYear()} 
         </div>
         <div className="text-xs text-[#cdc5b7]">
-            *This product is an unfinished RAW product, to be finished by customer.
-            The statements on the website have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.**
+            **{t('disclaimer')}**
         </div>
     </div>
     </footer>
