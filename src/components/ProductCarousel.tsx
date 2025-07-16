@@ -1,64 +1,48 @@
-import { useState } from "react";
-import Image from "next/image";
-import {Link} from '@/i18n/navigation';
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+'use client';
 
-const products = [
-  {
-    key: "fiber",
-    img: "/product-images/bulkbag_combo.png",
-    alt: "Bulk Bag of Yucca Schidigera Fiber",
-    info: (
-      <div className="section_desmar desmar_light_brown_bg">
-        <h2 className="subheading_desmar desmar_text_brown text-center">Yucca Schidigera Fiber/Powder</h2>
-        <div className="interesting_text_desmar">▸ Yucca Fiber at various TDS and Mesh Levels</div>
-        <div className="side_by_side_container_desmar">
-          <div className="">
-            Yucca Schidigera Powder/Fiber is a raw material that maintains its foaming ability and ingredient integrity for over two years. It comes in packaging that includes double polyethylene-lined bags, fiber drums or cardboard boxes, with net weights of 20 kg, 25 kg, and 50 lbs (22.67 kg).
-            <br/>
-            <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ Inquire for Order Details</Link>
-          </div>
-          {/* <div className="w-1/3">
-            <Image src={"/product-images/bulkbag_combo.png"} alt="Bulk Bag of Yucca Schidigera Fiber" width={897} height={1021} className=""/>
-          </div> */}
-        </div>
-      </div>
-    ),
-  },
-  {
-    key: "extract",
-    img: "/product-images/container_big_official_combo.png",
-    alt: "Industrial Container of Yucca Schidigera Extract",
-    info: (
-      <div className="section_desmar desmar_light_brown_bg">
-        <h2 className="subheading_desmar desmar_text_brown text-center">Yucca Schidigera Concentrate/Extract</h2>
-        <div className="interesting_text_desmar">▸ Yucca extracts at various Brix levels (30%, 40%, and 50%)</div>
-        <div className="side_by_side_container_desmar">
-          <div className="">
-            Our Yucca Schidigera Extract is the natural solution you need to enhance the quality of your products. Our raw material is carefully extracted and purified to produce a highly concentrated formula that is packaged in 55-gallon drums, 250-gallon totes, and 330-gallon totes.<br/>
-            <br/>
-            Choose our extract today and experience the benefits of a pure and effective product.
-            <Link href={"/contact-us"} className="button_link desmar_brown_bg mt-8">▷ Inquire for Order Details</Link>
-          </div>
-          {/* <div className="w-1/3">
-            <Image src={"/product-images/container_big_official_combo.png"} alt="Industrial Container of Yucca Schidigera Extract" width={887} height={925} className=""/>
-          </div> */}
-        </div>
-      </div>
-    ),
-  },
-];
+import { useState } from 'react';
+import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 export default function ProductCarousel() {
+  const t = useTranslations('Our-Products');
   const [selected, setSelected] = useState(0);
 
-  const prev = () => setSelected((selected - 1 + products.length) % products.length);
-  const next = () => setSelected((selected + 1) % products.length);
+  const prev = () => setSelected((selected - 1 + 2) % 2);
+  const next = () => setSelected((selected + 1) % 2);
+
+  const products = [
+    {
+      key: 'fiber',
+      img: '/product-images/bulkbag_combo.png',
+      alt: "Bulkbag of Yucca Schidigera Fiber",
+      title: t('fiber-powder-title'),
+      bullet: t('fiber-powder-tds-levels'),
+      p1: t('fiber-powder-p1'),
+      p2: t('fiber-powder-p2'),
+      linkText: t('fiber-powder-inquire-link'),
+    },
+    {
+      key: 'extract',
+      img: '/product-images/container_big_official_combo.png',
+      alt: "Industrial Container of Yucca Schidigera Extract",
+      title: t('concentrate-extract-title'),
+      bullet: t('concentrate-extract-brix-levels'),
+      p1: t('concentrate-extract-p1'),
+      p2: t('concentrate-extract-p2'),
+      linkText: t('concentrate-extract-inquire-link'),
+    },
+  ];
+
+  const product = products[selected];
 
   return (
     <div className="flex flex-col items-center my-8">
+      {/* Image Carousel */}
       <div className="relative flex items-center justify-center w-full max-w-2xl h-[400px]">
-        {/* Left Chevron */}
+        {/* Left */}
         <button
           onClick={prev}
           className="absolute left-0 z-999 p-2 bg-white bg-opacity-70 rounded-full shadow hover:bg-opacity-100 transition"
@@ -66,10 +50,10 @@ export default function ProductCarousel() {
         >
           <FaChevronLeft size={28} />
         </button>
-        {/* Images */}
+
+        {/* Image */}
         <div className="flex w-full items-center justify-center relative">
-          {products.map((product, idx) => {
-            // Calculate position: -1 (left), 0 (center), 1 (right)
+          {products.map((prod, idx) => {
             const pos = idx - selected;
             let style = "absolute transition-all duration-500";
             if (pos === 0) {
@@ -83,9 +67,9 @@ export default function ProductCarousel() {
             }
             return (
               <Image
-                key={product.key}
-                src={product.img}
-                alt={product.alt}
+                key={prod.key}
+                src={prod.img}
+                alt={prod.alt}
                 width={350}
                 height={350}
                 className={style + " rounded-lg shadow-lg"}
@@ -95,7 +79,8 @@ export default function ProductCarousel() {
             );
           })}
         </div>
-        {/* Right Chevron */}
+
+        {/* Right */}
         <button
           onClick={next}
           className="absolute right-0 z-999 p-2 bg-white bg-opacity-70 rounded-full shadow hover:bg-opacity-100 transition"
@@ -104,9 +89,21 @@ export default function ProductCarousel() {
           <FaChevronRight size={28} />
         </button>
       </div>
-      {/* Info below */}
-      <div className="px-40 mt-8 product-info-fade">
-        {products[selected].info}
+
+      {/* Info below carousel */}
+      <div className="section_desmar desmar_light_brown_bg px-8 mt-8 product-info-fade w-full max-w-6xl">
+        <h2 className="subheading_desmar desmar_text_brown text-center">{product.title}</h2>
+        <div className="interesting_text_desmar">▸ {product.bullet}</div>
+        <div className="side_by_side_container_desmar">
+          <div className="w-full ">
+            <p>{product.p1}</p>
+            <br />
+            <p>{product.p2}</p>
+            <Link href="/contact-us" className="button_link desmar_brown_bg mt-8">
+              ▷ {product.linkText}
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
