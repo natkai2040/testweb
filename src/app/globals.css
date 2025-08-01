@@ -31,6 +31,10 @@ a { /* Link Styles */
   text-decoration: underline;
 }
 
+.desmar_dark_bg a { 
+  color: #cd9542; /* desmar_text_white */
+}
+
 .desmar_text_white a { 
   color: #EEE2CA; /* desmar_text_white */
 }

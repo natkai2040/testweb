@@ -16,7 +16,7 @@ export default function Footer() {
             height={195}
             alt="Desmar Logo"
             />  
-            <p>
+            <p className='desmar_dark_bg'>
                 <br/>
                 <Link href="/about-us">{t('about-us')}</Link><br/>
                 <br/>
@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
         </div> 
         <div>
-            <p className='text-left'>
+            <p className='text-left desmar_dark_bg'>
                 DESMAR GLOBAL INCORPORATED<br/>
                 <br/>
                 <span className="font-bold">{t('email')}</span> info@desmarglobal.com<br/>
@@ -39,7 +39,7 @@ export default function Footer() {
             </p>
         </div>
         <div>
-            <p className='text-left'>
+            <p className='text-left desmar_dark_bg'>
                 {t('about-yucca-title')}<br/>
                 <br/>
                 <Link href="/about-yucca-schidigera#agriculture">{t('yucca-for-agriculture-link')}</Link><br/>
@@ -50,7 +50,7 @@ export default function Footer() {
             </p>
         </div>
         <div>
-            <p className='text-left'>
+            <p className='text-left desmar_dark_bg'>
                 {t('our-products-title')}<br/>
                 <br/>
                 <Link href="/our-products#yucca-fiber">{t('yucca-fiber-link')}</Link><br/>
