@@ -15,8 +15,6 @@ export default function Contact_Us() {
         <p>
           {t('details')} <br/>
           {t('or-visit')}
-          {/* We are available for product inquiry over email, phone, at our address, or by submitting the <span className="font-bold">contact form</span> below. <br/>
-          Better yet, visit us! We love our customers, so feel free to visit us in person. */}
         </p>
       </div>
 
@@ -84,6 +82,10 @@ export default function Contact_Us() {
           </div>
           <p>{t('contact-form-product-of-interest')} ({t('contact-form-select-multiple')}) ({t('contact-form-optional')})</p>
           <div className="form-group">
+            <label>
+              <input type="checkbox" name="product" value="Yucca Spray Dry" />
+              {t('contact-form-yucca-spray-dry')}
+            </label><br/>
             <label>
               <input type="checkbox" name="product" value="Yucca Concentrate/Extract" />
               {t('contact-form-yucca-concentrate-extract')}

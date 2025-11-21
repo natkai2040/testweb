@@ -197,6 +197,14 @@ label {
   justify-content: center; /* Center items vertically */
 }
 
+.side_by_side_container_start_desmar {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column; /* Stack vertically by default */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
 .close_button_desmar {
   position: absolute;
   top: 0.5rem;
@@ -209,6 +217,13 @@ label {
 @media (min-width: 768px) {
   .side_by_side_container_desmar {
     flex-direction: row; /* Side by side on medium screens and up */
+  }
+}
+
+@media (min-width: 768px) {
+  .side_by_side_container_start_desmar {
+    flex-direction: row; /* Side by side on medium screens and up */
+    align-items: start; /* Center items horizontally */
   }
 }
 

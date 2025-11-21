@@ -10,10 +10,20 @@ export default function ProductCarousel() {
   const t = useTranslations('Our-Products');
   const [selected, setSelected] = useState(0);
 
-  const prev = () => setSelected((selected - 1 + 2) % 2);
-  const next = () => setSelected((selected + 1) % 2);
+  const prev = () => setSelected((selected - 1 + 3) % 3);
+  const next = () => setSelected((selected + 1) % 3);
 
   const products = [
+    {
+      key: 'spraydry',
+      img: '/product-images/spray_dry_powder_combo.png',
+      alt: "Container of Yucca Schidigera Spray Dry",
+      title: t('spray-dry-title'),
+      bullet: t('spray-dry-levels-short'),
+      p1: t('spray-dry-p1'),
+      p2: t('spray-dry-p2'),
+      linkText: t('spray-dry-inquire-link'),
+    },
     {
       key: 'fiber',
       img: '/product-images/bulkbag_combo.png',
@@ -45,7 +55,7 @@ export default function ProductCarousel() {
         {/* Left */}
         <button
           onClick={prev}
-          className="absolute left-0 z-999 p-2 bg-white bg-opacity-70 rounded-full shadow hover:bg-opacity-100 transition"
+          className="absolute left-0 z-999 p-2 bg-white bg-opacity-70 rounded-full shadow hover:bg-opacity-100 transition cursor-pointer"
           aria-label="Previous"
         >
           <FaChevronLeft size={28} />
@@ -83,7 +93,7 @@ export default function ProductCarousel() {
         {/* Right */}
         <button
           onClick={next}
-          className="absolute right-0 z-999 p-2 bg-white bg-opacity-70 rounded-full shadow hover:bg-opacity-100 transition"
+          className="absolute right-0 z-999 p-2 bg-white bg-opacity-70 rounded-full shadow hover:bg-opacity-100 transition cursor-pointer"
           aria-label="Next"
         >
           <FaChevronRight size={28} />
@@ -97,7 +107,6 @@ export default function ProductCarousel() {
         <div className="side_by_side_container_desmar">
           <div className="w-full ">
             <p>{product.p1}</p>
-            <br />
             <p>{product.p2}</p>
             <Link href="/contact-us" className="button_link desmar_brown_bg mt-8">
               ▷ {product.linkText}

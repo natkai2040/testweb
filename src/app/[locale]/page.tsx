@@ -42,7 +42,6 @@ export default function MainPage() {
           <h1 className="heading_desmar desmar_text_white text-shadow-sm text-left mb-8 desmar_text_shadow">
             {t('hero-title')}
           </h1>
-
           <h2 className="ml-0 italic text-xl desmar_text_white text-shadow-sm font-bold text-left mb-8 desmar_text_shadow">
             {t('hero-subtitle')}
           </h2>
@@ -63,11 +62,15 @@ export default function MainPage() {
       <div className="section_desmar desmar_light_brown_bg desmar_text_brown">
         <h2 className="subheading_desmar desmar_text_brown">{t('our-products-title')}</h2>
         <div className="interesting_text_desmar">
-          ▸ {t('our-products-fiber')}<br/>
+          ▸ <span className="font-bold">{t('our-products-spray-dry')}</span> {t('spray-dry-details-maltodextrin')}
+          <br/><br/>
+          ▸ <span className="font-bold">{t('our-products-spray-dry')}</span> {t('spray-dry-details-cyclodextrin')}
+          <br/><br/>
+          ▸ <span className="font-bold">{t('our-products-fiber')}</span> {t('fiber-details')}<br/>
           <br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;▸ {t('our-products-extract')}<br/>
+          ▸ <span className="font-bold">{t('our-products-extract')}</span> {t('extract-details')}<br/>
           <br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▸ {t('our-products-orders')}<br/>
+          ▸ {t('our-products-orders')}<br/>
         </div>
         <div className="side_by_side_container_desmar">
           <Link href="/our-products" className="button_link bg-[#749772]">▷ {t('more-product-info-link')}</Link>

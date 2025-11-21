@@ -2,28 +2,38 @@
 import Image from "next/image"
 import {Link} from '@/i18n/navigation';
 import { useTranslations } from 'next-intl'
+import { FaLinkedin } from "react-icons/fa";
+
 
 export default function Footer() {
   const t = useTranslations('Footer')
 
   return (
     <footer className="w-full text-center desmar_text_light text-sm mt-8 bg-[#373816]">
-    <div className="w-full py-8 bg-[#3c472f] side_by_side_container_desmar justify-apart">
-        <div className="w-40 shrink-0 p-4">
+    <div className="w-full py-8 bg-[#3c472f] side_by_side_container_start_desmar justify-apart">
+        <div className="w-40 shrink-0">
             <Image
             src='/New Desmar-1-transparent.png'
             width={611}
             height={195}
             alt="Desmar Logo"
+            className="mb-4"
             />  
-            <p className='desmar_dark_bg'>
-                <br/>
-                <Link href="/about-us">{t('about-us')}</Link><br/>
-                <br/>
-                <Link href="/contact-us">{t('contact-us')}</Link><br/>
-                <br/>
-                <Link href="/contact-us">{t('get-a-quote')}</Link><br/>
-            </p>
+            <ul className='desmar_dark_bg flex flex-col'>
+                <li>
+                    <a href="https://www.linkedin.com/company/desmarglobal" target="_blank" className="flex items-center justify-center gap-2">
+                        <span>
+                            <FaLinkedin className="text-xl" />
+                        </span>
+                        <span>
+                            Linkedin
+                        </span>
+                    </a>
+                </li>
+                <li><Link href="/about-us">{t('about-us')}</Link></li>
+                <li><Link href="/contact-us">{t('contact-us')}</Link></li>
+                <li><Link href="/contact-us">{t('get-a-quote')}</Link></li>
+            </ul>
         </div> 
         <div>
             <p className='text-left desmar_dark_bg'>
@@ -52,6 +62,8 @@ export default function Footer() {
         <div>
             <p className='text-left desmar_dark_bg'>
                 {t('our-products-title')}<br/>
+                <br/>
+                <Link href="/our-products#yucca-spray-dry">{t('yucca-spray-dry-link')}</Link><br/>
                 <br/>
                 <Link href="/our-products#yucca-fiber">{t('yucca-fiber-link')}</Link><br/>
                 <br/>
